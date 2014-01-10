@@ -24,3 +24,16 @@ C:\ProtoBuf\SerializersComparisons\SerializerCompare\SerializerCompare\bin\Debug
 C:\ProtoBuf\SerializersComparisons\SerializerCompare\SerializerCompare\bin\Debug\protobuf-net.xml
 C:\ProtoBuf\SerializersComparisons\SerializerCompare\SerializerCompare\bin\Debug\ServiceStack.Text.xml
 C:\ProtoBuf\SerializersComparisons\SerializerCompare\SerializerCompare\obj\Debug\SerializerCompare.csprojResolveAssemblyReference.cache
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\SerializerCompare.exe.config
+C:\ProtocolBufferComparisons\SerializerCompare\obj\Debug\SerializerCompare.exe
+C:\ProtocolBufferComparisons\SerializerCompare\obj\Debug\SerializerCompare.pdb
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\SerializerCompare.exe
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\SerializerCompare.pdb
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\Newtonsoft.Json.dll
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\protobuf-net.dll
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\ServiceStack.Text.dll
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\Newtonsoft.Json.xml
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\protobuf-net.pdb
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\protobuf-net.xml
+C:\ProtocolBufferComparisons\SerializerCompare\bin\Debug\ServiceStack.Text.xml
+C:\ProtocolBufferComparisons\SerializerCompare\obj\Debug\SerializerCompare.csprojResolveAssemblyReference.cache

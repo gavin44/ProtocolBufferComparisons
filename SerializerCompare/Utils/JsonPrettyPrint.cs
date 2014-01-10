@@ -17,9 +17,9 @@ namespace SerializerCompare.Utils
 			var _quoted = false;
 			var _stringBuilder = new StringBuilder();
 
-			for (var index = 0; index < jsonString.Length; index++)
+			for (var _index = 0; _index < jsonString.Length; _index++)
 			{
-				var _char = jsonString[index];
+				var _char = jsonString[_index];
 
 				switch (_char)
 				{
@@ -46,8 +46,9 @@ namespace SerializerCompare.Utils
 						_stringBuilder.Append(_char);
 
 						bool _escaped = false;
-						var _index = index;
-						while (_index > 0 && jsonString[--_index] == '\\')
+
+						var _indexPosition = _index;
+						while (_indexPosition > 0 && jsonString[--_indexPosition] == '\\')
 							_escaped = !_escaped;
 
 						if (!_escaped)

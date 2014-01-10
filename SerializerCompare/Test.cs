@@ -42,7 +42,7 @@ namespace SerializerCompare
 			List<Results> resultTable)
 		{
 			int _firstColumn = 5;
-			int _columnN = 20;
+			int _columnSpace = 20;
 
 			// Header - line 1
 			string _formatString = String.Format("{{0,{0}}}", _firstColumn);
@@ -53,7 +53,7 @@ namespace SerializerCompare
 			for (int i = 0; i < resultTable.Count; i++)
 			{
 				_toPrint = String.Format("{0}", resultTable[i].serName);
-				_formatString = String.Format("{{0,{0}}}", _columnN);
+				_formatString = String.Format("{{0,{0}}}", _columnSpace);
 
 				Console.Write(_formatString, _toPrint);
 			}
@@ -68,7 +68,7 @@ namespace SerializerCompare
 			for (int i = 0; i < resultTable.Count; i++)
 			{
 				_toPrint = String.Format("Size:{0} bytes", resultTable[i].sizeBytes);
-				_formatString = String.Format("{{0,{0}}}", _columnN);
+				_formatString = String.Format("{{0,{0}}}", _columnSpace);
 				System.Console.Write(_formatString, _toPrint);
 			}
 
@@ -76,17 +76,17 @@ namespace SerializerCompare
 
 			// Rest of Table
 			//Assumes: all colums have same length and rows line-up for same loop count
-			for (int row = 0; row < resultTable[0].resultColumn.Count; row++)
+			for (int _row = 0; _row < resultTable[0].resultColumn.Count; _row++)
 			{
 				_formatString = String.Format("{{0,{0}}}", _firstColumn);
-				_toPrint = resultTable[0].resultColumn[row].iteration.ToString();
+				_toPrint = resultTable[0].resultColumn[_row].iteration.ToString();
 
 				Console.Write(_formatString, _toPrint);
 
 				for (int i = 0; i < resultTable.Count; i++)
 				{
-					_formatString = String.Format("{{0,{0}}}", _columnN);
-					_toPrint = String.Format("{0,4:n4} ms", resultTable[i].resultColumn[row].time.TotalMilliseconds);
+					_formatString = String.Format("{{0,{0}}}", _columnSpace);
+					_toPrint = String.Format("{0,4:n4} ms", resultTable[i].resultColumn[_row].time.TotalMilliseconds);
 
 					Console.Write(_formatString, _toPrint);
 				}
@@ -105,7 +105,6 @@ namespace SerializerCompare
 			string _testObjJson;
 			var _iterations = 1;
 			var _result = new Results();
-			var _warmUpObjects = new List<object>();
 
 			_result.serName = serializer.GetName();
 			_result.resultColumn = new List<ResultColumnEntry>();
@@ -120,7 +119,7 @@ namespace SerializerCompare
 			_result.sizeBytes = _sizeInBytes;
 			_result.success = _isSuccess;
 			_result.testObjectAsJson = _testObjJson; // for debug
-			_result.serializedFormObject = PrintSerializedOutput<T>(serializer); // for debug
+			_result.serializedFormObject = this.PrintSerializedOutput<T>(serializer); // for debug
 
 			Console.WriteLine("Serializer : {0}\nMessage Format :\n\t{1}\n\n",serializer, _result.serializedFormObject);
 			if (_result.serName == "ProtoBuf")
@@ -186,7 +185,7 @@ namespace SerializerCompare
 				_stopWatch.Reset();
 				_stopWatch.Start();
 
-				for (int index = 0; index < iterations; index++)
+				for (int _index = 0; _index < iterations; _index++)
 				{
 					_stringOutput = serializer.Serialize<T>(this.c_originalObject);
 
@@ -206,21 +205,15 @@ namespace SerializerCompare
 			_entry.iteration = iterations;
 
 			long _avgerageTicks = (_stopWatch.Elapsed.Ticks / iterations);
-			//if (_avgerageTicks == 0)
-			//{
-			//	// sometime when running windows inside a VM this is 0! Possible vm issue?
-			//	//Debugger.Break();
-			//}
 
 			_entry.time = new TimeSpan(_avgerageTicks);
 
-
 			// Debug: To aid printing to screen, human debugging etc. Json used as best for console presentation
-			JsonNET jsonSer = new JsonNET();
+			JsonNET _jsonSerializer = new JsonNET();
 
-			string orignalObjectAsJson = JsonHelper.FormatJson(jsonSer.Serialize<T>(c_originalObject));
+			string _orignalObjectAsJson = JsonHelper.FormatJson(_jsonSerializer.Serialize<T>(c_originalObject));
 
-			testObjJson = JsonHelper.FormatJson(jsonSer.Serialize<T>(c_testObject));
+			testObjJson = JsonHelper.FormatJson(_jsonSerializer.Serialize<T>(c_testObject));
 			success = true;
 
 			return _entry;

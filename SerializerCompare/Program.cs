@@ -78,11 +78,11 @@ namespace SerializerCompare
 		static void PrintTestObject(
 			string serializationType)
 		{
-			Results resultsThisSer = c_results.Find(a => a.serName == serializationType);
+			Results _resultsThisSer = c_results.Find(a => a.serName == serializationType);
 
-			if (resultsThisSer != null)
+			if (_resultsThisSer != null)
 			{
-				Console.WriteLine(resultsThisSer.serializedFormObject);
+				Console.WriteLine(_resultsThisSer.serializedFormObject);
 			}
 			else
 			{
@@ -97,8 +97,8 @@ namespace SerializerCompare
 			var _originalObject = new SerializerCompare.Entities.InheritedEntity();
 			_originalObject.FillDummyData();
 
-			var testObject = new SerializerCompare.Entities.InheritedEntity();
-			c_results = c_test.RunTests(_originalObject, testObject);
+			var _testObject = new SerializerCompare.Entities.InheritedEntity();
+			c_results = c_test.RunTests(_originalObject, _testObject);
 
 			c_test.PrintResultTable(c_results);
 		}
