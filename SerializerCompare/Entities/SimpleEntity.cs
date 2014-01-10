@@ -62,13 +62,13 @@ namespace SerializerCompare.Entities
 			this.Message = "Hello World!";
 			this.FunctionCall = "FunctionNameHere";
 			this.Parameters = "x=1,y=2,z=3";
-			this.Name = "Mickey Mouse";
+			this.Name = "SampleName";
 			this.EmployeeId = 1;
 			this.RaiseRate = 1.2F;
-			this.AddressLine1 = "1 Disney Street";
-			this.AddressLine2 = "Disneyland, CA";
-
+			this.AddressLine1 = "1 High Street";
+			this.AddressLine2 = "Kerry";
 			this.Icon = new byte[16];
+
 			var _cryptoServiceProvider = new RNGCryptoServiceProvider();
 			_cryptoServiceProvider.GetBytes(Icon);
 		}

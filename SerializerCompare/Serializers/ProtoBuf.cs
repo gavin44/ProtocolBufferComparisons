@@ -1,5 +1,5 @@
-﻿using ProtoBuf;
-using System.IO;
+﻿using System.IO;
+using ProtoBuf;
 
 
 namespace SerializerCompare.Serializers
