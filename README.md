@@ -13,9 +13,6 @@ http://stackoverflow.com/questions/11550762/fast-simple-object-serialization/115
 En-queuing Protocol Buffer messages with RabbitMQ Manager 
 http://stackoverflow.com/questions/20483935/en-queueing-protocol-buffer-messages-with-rabbitmq-manager
 
-Key differences between Apache Thrift, Protocol Buffers, MessagePack....
-http://stackoverflow.com/questions/4633611/what-are-the-key-differences-between-apache-thrift-google-protocol-buffers-mes/20806438#20806438
-
 Lessons learned from Protocol Buffers - Jon Skeet
 http://msmvps.com/blogs/jon_skeet/archive/tags/Protocol+Buffers/default.aspx
 
@@ -30,5 +27,6 @@ https://code.google.com/p/protobuf-net/
 
 Versioning
 http://www.codeproject.com/Articles/642677/Protobuf-net-the-unofficial-manual#versioning
+https://developers.google.com/protocol-buffers/docs/proto#updating
 
 
