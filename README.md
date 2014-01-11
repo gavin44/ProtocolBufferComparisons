@@ -25,6 +25,9 @@ https://code.google.com/p/protobuf-net/wiki/Performance
 Use protocol buffers serialization from your .NET code
 https://code.google.com/p/protobuf-net/
 
+How does protocol buffer handle versioning?
+http://stackoverflow.com/questions/8519381/how-does-protocol-buffer-handle-versioning
+
 Versioning
 http://www.codeproject.com/Articles/642677/Protobuf-net-the-unofficial-manual#versioning
 https://developers.google.com/protocol-buffers/docs/proto#updating
