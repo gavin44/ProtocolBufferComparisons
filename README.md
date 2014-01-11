@@ -30,6 +30,10 @@ http://stackoverflow.com/questions/8519381/how-does-protocol-buffer-handle-versi
 
 Versioning
 http://www.codeproject.com/Articles/642677/Protobuf-net-the-unofficial-manual#versioning
+
 https://developers.google.com/protocol-buffers/docs/proto#updating
+
+How to send multiple types of objects across Protobuf.
+http://stackoverflow.com/questions/3048650/how-can-i-send-multiple-types-of-objects-across-protobuf
 
 
