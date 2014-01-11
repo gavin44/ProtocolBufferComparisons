@@ -7,6 +7,9 @@ It is a way of serializing structured data for use in communications protocols, 
 
 Links
 ======
+Performance comparison between binary formatter and protocol buffers
+http://stackoverflow.com/questions/11550762/fast-simple-object-serialization/11550778#11550778
+
 En-queuing Protocol Buffer messages with RabbitMQ Manager 
 http://stackoverflow.com/questions/20483935/en-queueing-protocol-buffer-messages-with-rabbitmq-manager
 
