@@ -3,7 +3,7 @@ Comparisons of Protobuf-net, Json.NET and XML.Net
 
 What are Protocol buffers?
 ======================
-It is a way of serializing structured data for use in communications protocols, data storage and more.
+It is a way of serializing structured data for use in communications protocols, data storage and more...
 
 Links
 ======
